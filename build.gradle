@@ -32,6 +32,10 @@ dependencies {
     implementation "org.web3j:core:$web3jVersion",
             "ch.qos.logback:logback-core:$logbackVersion",
             "ch.qos.logback:logback-classic:$logbackVersion"
+    implementation 'commons-codec:commons-codec:1.12'
+    compile 'org.projectlombok:lombok:1.18.8'
+
+
     // Use JUnit test framework
     testImplementation 'junit:junit:4.12'
 }
