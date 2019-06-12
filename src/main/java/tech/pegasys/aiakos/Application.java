@@ -59,11 +59,13 @@ public class Application {
     owner.addMaintainer(maintainer2.getConfiguration().getAccountAddress());
     // Maintainers: grant approvals.
     maintainer1.deployRelease(pantheonRelease);
-    maintainer2.deployRelease(pantheonRelease);
-
     // Get release info.
-    final ReleaseInfo releaseInfo = owner.getReleaseInfo(pantheonRelease);
-    log.info("Release info: {}", releaseInfo);
+    final ReleaseInfo releaseInfoAfterFirstApproval = owner.getReleaseInfo(pantheonRelease);
+    log.info("Release info: {}", releaseInfoAfterFirstApproval);
+    maintainer2.deployRelease(pantheonRelease);
+    // Get release info.
+    final ReleaseInfo releaseInfoAfterSecondApproval = owner.getReleaseInfo(pantheonRelease);
+    log.info("Release info: {}", releaseInfoAfterSecondApproval);
     // new Application().run();
   }
 
