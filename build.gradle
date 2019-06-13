@@ -33,7 +33,10 @@ dependencies {
             "ch.qos.logback:logback-core:$logbackVersion",
             "ch.qos.logback:logback-classic:$logbackVersion"
     implementation 'commons-codec:commons-codec:1.12'
-    compile 'org.projectlombok:lombok:1.18.8'
+    implementation 'info.picocli:picocli:3.9.6'
+
+    implementation 'org.projectlombok:lombok:1.18.8'
+    implementation 'com.google.code.gson:gson:2.8.5'
 
 
     // Use JUnit test framework

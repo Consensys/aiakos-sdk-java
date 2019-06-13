@@ -42,4 +42,12 @@ public class AiakosUser {
       throw new AiakosException("getReleaseInfo error.", e);
     }
   }
+
+  public boolean amIMaintainer() throws AiakosException {
+    try {
+      return contract.amIMaintainer().send();
+    } catch (Exception e) {
+      throw new AiakosException("amIMaintainer error.", e);
+    }
+  }
 }
